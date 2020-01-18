@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  {% if title %}
+  <title>NeighbourHood - {{title}}</title>
+  {% else %}
+    <title> NeighbourHood Watch </title>
+  {% endif %}
+
+</head>
+<body>
+    {% block content %}
+     <h1>Welcome to NeighbourHood Watch.<br>
+     {{date|date:"l d-F Y"}}</h1> 
+     {%endblock%}
+</body>
+</html>
