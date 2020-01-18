@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from .models import Neighbourhood
 
 # Create your views here.
 
-def hood(request):
-    return render(request, 'hood/index.html')
+def index(request):
+    hoods = Neighbourhood.objects.all()
+    return render(request, 'hood/index.html',{'hoods':hoods})
