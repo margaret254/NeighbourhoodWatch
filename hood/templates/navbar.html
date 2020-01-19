@@ -6,12 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<nav class="navbar navbar-defautl">
+<!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">NeighbourHood Watch</a>
-    </div>
-  </div>
+        </div> -->
+      <nav class="navbar navbar-expand-sm navbar-default">
+
+          <!-- Links -->
+          <ul class="navbar-nav navigation">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'index' %}">NeighbourHoodWatch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/accounts/register">Register Here</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/accounts/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+          </ul>
+        
+        
+
+    <!-- Adding a Search Form -->
+    <div class="col-sm-4 col-md-4 navbar-right">
+
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Hood" name="Hood">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <!-- search form end -->
+      
+      <div class="pro">
+                           <a href="{% url 'profile' %}"> 
+                              <img class="rounded-circle nav-img"src="{{ profile.profile_pic.url }}" alt="">
+                              &nbsp; Profile
+                          </a>
+          
+        </div>
+  <!-- </div> -->
 </nav>
 </body>
 </html>
