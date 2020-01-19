@@ -1,0 +1,26 @@
+{% extends 'hood/base.html'%}
+{% block content %}
+<div class="container">
+    <div class="row">
+    <div class="card" style="width: 18rem;">
+    <img src="{{hood.hood_pic.url}}" class="card-img-top" alt="image">
+    <div class="card-body">
+      <h5 class="card-title">{{hood.name}}</h5>
+      <p class="card-text">{{hood.location}}</p>
+    </div>
+      
+      <button><a href="#" class="card-link">Add Business</a></button>
+      <button><a href="#" class="card-link">Add a Post</a></button>
+    </div>
+  </div>
+ 
+  
+  <div class="row">
+        {% autoescape on %}
+        {{article.post| safe}}
+       {% endautoescape %}
+   
+      </div>
+  </div>
+
+{% endblock %}
