@@ -1,1 +1,1 @@
-web: gunicorn maggie254hood.wsgi --log-file -
+web: gunicorn Hoodwatch.wsgi --log-file -
